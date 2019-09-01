@@ -1,0 +1,7 @@
+{
+  "token": "BOT_TOKEN_HERE",
+  "prefix": ".",
+  "activity": "les nouveaux membres",
+
+  "join_logs_chan": "ID_HERE"
+}

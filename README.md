@@ -1,6 +1,7 @@
 # Informations utilisateur • Robot Discord
 
 Ce bot Discord très simple vous permet **d'obtenir des informations sur un utilisateur** via la commande `userinfo`, ou lorsqu'un nouveau membre rejoindre votre serveur.
+> Ce projet a pour but de fournir un exemple concret aux utulisateurs souhaitant apprendre l'utilisation de [discord.py](https://github.com/Rapptz/discord.py).
 
 ![](https://i.imgur.com/RKgSNJJ.png)
 

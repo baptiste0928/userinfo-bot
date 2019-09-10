@@ -2,6 +2,7 @@ import json
 import discord
 from discord.ext import commands
 import glob
+import os
 
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -12,7 +13,7 @@ bot.config = config
 
 modules = []
 for file in glob.glob("cogs/*.py"):
-    modules.append(file.replace('\\', '.').replace('.py', ''))
+    modules.append(file.replace(os.path.sep, '.').replace('.py', ''))
 
 if __name__ == '__main__':
     for extension in modules:

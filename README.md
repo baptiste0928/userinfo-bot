@@ -6,7 +6,7 @@ Ce bot Discord très simple vous permet **d'obtenir des informations sur un util
 ![](https://i.imgur.com/RKgSNJJ.png)
 
 ## Configuration
-Avant de lancer le robot, il est nécéssaire de le configurer. Pour cela, renommez le fichier `config-example.json` en `config.json`. Voici les variables que vous pouvez personaliser :
+Avant de lancer le robot, il est nécessaire de le configurer. Pour cela, renommez le fichier `config-example.json` en `config.json`. Voici les variables que vous pouvez personnaliser :
 
 | Nom du paramètre | Description                                                                         |
 |------------------|-------------------------------------------------------------------------------------|
@@ -18,7 +18,7 @@ Avant de lancer le robot, il est nécéssaire de le configurer. Pour cela, renom
 ## Lancement
 Assurez vous d'avoir **Python 3.6** au minimum d'installé sur votre machine.
 
-**Installation des dépendances :** `pip install -r requirements.txt`
+**Installation des dépendances :** `pip install -r requirements.txt`  
 **Lancement du bot :** `python main.py`
 
 ## License

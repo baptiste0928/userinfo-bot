@@ -14,13 +14,12 @@ class JoinLogs(commands.Cog):
         if join_logs is None:
             return
 
-        embed = discord.Embed(description="""**{} vient de rejoindre le serveur.**
-        Son compte a été créé le {}, soit il y a {} jours.
-        """.format(member.mention, member.created_at.strftime('%d/%m/%Y'),
-                   (datetime.datetime.now() - member.created_at).days), timestamp=datetime.datetime.now())
-        embed.set_footer(text="ID : {} | 👨‍💻 Créé par baptiste0928#0001".format(member.id))
+        embed = discord.Embed(description=f"""**{member.mention} vient de rejoindre le serveur.**
+        Son compte a été créé le {member.created_at.strftime('%d/%m/%Y')}, soit il y a {(datetime.datetime.now() - member.created_at).days} jours.
+        """, timestamp=datetime.datetime.now())
+        embed.set_footer(text=f"ID : {member.id} | 👨‍💻 Créé par baptiste0928#0001")
 
-        embed.set_author(name="{}#{}".format(member.name, member.discriminator), icon_url=member.avatar_url)
+        embed.set_author(name=member, icon_url=member.avatar_url)
 
         await join_logs.send(embed=embed)
 

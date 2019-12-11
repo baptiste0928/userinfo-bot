@@ -20,14 +20,14 @@ if __name__ == '__main__':
         try:
             bot.load_extension(extension)
         except Exception as e:
-            print("Failed to load extension {} : {}".format(extension, e))
+            print(f"Failed to load extension {extension} : {e}")
 
 
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(status=discord.Status.idle, name=config["activity"],
                                                         type=discord.ActivityType.watching), )
-    print("Connected as {}".format(bot.user))
+    print(f"Connected as {bot.user}")
     print("Ready !")
 
 bot.run(config.get("token"))

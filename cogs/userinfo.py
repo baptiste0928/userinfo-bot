@@ -32,15 +32,12 @@ class UserInfo(commands.Cog):
         embed.set_author(name=str(user), icon_url=user.avatar_url)
         embed.set_thumbnail(url=user.avatar_url)
 
-        embed.add_field(name="Création du compte", value="Le {} (il y a {} jours)"
-                        .format(user.created_at.strftime('%d/%m/%Y'), (datetime.datetime.now() - user.created_at).days))
+        embed.add_field(name="Création du compte", value=f"Le {user.created_at.strftime('%d/%m/%Y')} (il y a {(datetime.datetime.now() - user.created_at).days} jours)")
 
         if isinstance(user, discord.Member):
-            embed.add_field(name="Membre de ce serveur", value="A rejoint le {} (il y a {} jours)"
-                            .format(user.joined_at.strftime('%d/%m/%Y'),
-                                    (datetime.datetime.now() - user.joined_at).days))
+            embed.add_field(name="Membre de ce serveur", value=f"A rejoint le {user.joined_at.strftime('%d/%m/%Y')} (il y a {(datetime.datetime.now() - user.joined_at).days} jours)")
 
-        embed.set_footer(text="ID : {} | 👨‍💻 Créé par baptiste0928#0001".format(user.id))
+        embed.set_footer(text=f"ID : {user.id} | 👨‍💻 Créé par baptiste0928#0001")
 
         await ctx.send(embed=embed)
 

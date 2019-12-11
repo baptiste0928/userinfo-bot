@@ -36,7 +36,7 @@ Ce robot est créé par baptiste0928#0001, et est disponible sous [license MIT](
     @commands.command()
     @commands.cooldown(2, 60, type=commands.BucketType.user)
     async def ping(self, ctx):
-        await ctx.send("Pong ! :ping_pong: `{}ms`".format(str(round(self.bot.latency * 1000))))
+        await ctx.send(f"Pong ! :ping_pong: `{round(self.bot.latency * 1000)}ms`")
 
     @commands.command()
     @commands.is_owner()
@@ -44,9 +44,9 @@ Ce robot est créé par baptiste0928#0001, et est disponible sous [license MIT](
         try:
             self.bot.reload_extension(extension)
         except Exception as e:
-            await ctx.send("**:warning: Impossible de recharger l'extension `{}` : `{}`**".format(extension, str(e)))
+            await ctx.send(f"**:warning: Impossible de recharger l'extension `{extension}` : `{str(e)}`**")
         else:
-            await ctx.send("**:information_source: Extension `{}` rechargée !**".format(extension))
+            await ctx.send(f"**:information_source: Extension `{extension}` rechargée !**")
 
 
 def setup(bot):
